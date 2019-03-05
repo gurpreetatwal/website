@@ -1,1 +1,248 @@
-body,header,main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}body,ul{margin:0}.aWrap,ul li a{width:100%}a,ul li a{text-decoration:none}ul li,ul li a img{height:40px}.fa,img{vertical-align:middle}body,html{height:100%}body{background:url(pattern.png);font:16px Ubuntu,sans-serif;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-animation:animatedBackground 5s linear infinite;animation:animatedBackground 5s linear infinite}main{display:flex;margin-right:-110px}header{background:url(pattern_black.png);color:snow;display:flex;-webkit-flex-flow:row no-wrap;-ms-flex-flow:row no-wrap;flex-flow:row no-wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}#picWrap{max-width:150px;margin:25px}#profilePic{max-width:100%;height:auto;border-radius:80px}#title{padding:25px;border-left:1px solid #fff}ul{padding:0;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:absolute}ul li{list-style-type:none;text-align:left;width:40px;overflow:hidden;float:right;-webkit-transition:width .75 ease-in;transition:width .75s ease-in}ul li:hover{width:150px}ul li a{color:snow!important}.fa{font-size:30px;line-height:40px;width:40px;text-align:center;color:#000}.gith{background-color:#3472f7}.gith a{color:#87ABF8}.fa-gith:before{content:"\f09b"}.linin{background-color:#2ca8ff}.linin a{color:#83CBFE}.fa-linin:before{content:"\f0e1"}.email{background-color:#05ae0e}.email a{color:#4BCE54}.resume{background-color:#ff9500}.resume a{color:#FFBF64}.photo{background-color:#ff3b30}.photo a{color:#B10900}#shim{width:150px}@media screen and (max-width:767px){main{-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;height:100%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin:0}header,main,ul li,ul li:hover{width:100%}ul{width:50%;position:static}#shim{display:none}#title{padding:5px 25px}#picWrap{margin:10px 25px 5px}}@media screen and (max-width:450px){#major{display:none}}@-webkit-keyframes animatedBackground{from{background-position:0 0}to{background-position:-300px -300px}}@keyframes animatedBackground{from{background-position:0 0}to{background-position:-300px -300px}}
+body,
+header,
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+
+body,
+ul {
+  margin: 0;
+}
+
+.aWrap,
+ul li a {
+  width: 100%;
+}
+
+a,
+ul li a {
+  text-decoration: none;
+}
+
+ul li,
+ul li a img {
+  height: 40px;
+}
+
+.fa,
+img {
+  vertical-align: middle;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: url(pattern.png);
+  font: 16px Ubuntu, sans-serif;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: animatedBackground 5s linear infinite;
+  animation: animatedBackground 5s linear infinite;
+}
+
+main {
+  display: flex;
+  margin-right: -110px;
+}
+
+header {
+  background: url(pattern_black.png);
+  color: snow;
+  display: flex;
+  -webkit-flex-flow: row no-wrap;
+  -ms-flex-flow: row no-wrap;
+  flex-flow: row no-wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#picWrap {
+  max-width: 150px;
+  margin: 25px;
+}
+
+#profilePic {
+  max-width: 100%;
+  height: auto;
+  border-radius: 80px;
+}
+
+#title {
+  padding: 25px;
+  border-left: 1px solid #fff;
+}
+
+ul {
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: left;
+  width: 40px;
+  overflow: hidden;
+  float: right;
+  -webkit-transition: width 0.75 ease-in;
+  transition: width 0.75s ease-in;
+}
+
+ul li:hover {
+  width: 150px;
+}
+
+ul li a {
+  color: snow !important;
+}
+
+.fa {
+  font-size: 30px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  color: #000;
+}
+
+.gith {
+  background-color: #3472f7;
+}
+
+.gith a {
+  color: #87abf8;
+}
+
+.fa-gith::before {
+  content: "\f09b";
+}
+
+.linin {
+  background-color: #2ca8ff;
+}
+
+.linin a {
+  color: #83cbfe;
+}
+
+.fa-linin::before {
+  content: "\f0e1";
+}
+
+.email {
+  background-color: #05ae0e;
+}
+
+.email a {
+  color: #4bce54;
+}
+
+.resume {
+  background-color: #ff9500;
+}
+
+.resume a {
+  color: #ffbf64;
+}
+
+.photo {
+  background-color: #ff3b30;
+}
+
+.photo a {
+  color: #b10900;
+}
+
+#shim {
+  width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  header,
+  main,
+  ul li,
+  ul li:hover {
+    width: 100%;
+  }
+
+  ul {
+    width: 50%;
+    position: static;
+  }
+
+  #shim {
+    display: none;
+  }
+
+  #title {
+    padding: 5px 25px;
+  }
+
+  #picWrap {
+    margin: 10px 25px 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #major {
+    display: none;
+  }
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -300px -300px;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -300px -300px;
+  }
+}
+

@@ -1,9 +1,7 @@
 body,
 header,
 main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: flex;
 }
 
 body,
@@ -40,13 +38,7 @@ body {
   background: url(pattern.png);
   font: 16px Ubuntu, sans-serif;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   -webkit-animation: animatedBackground 5s linear infinite;
   animation: animatedBackground 5s linear infinite;
@@ -61,12 +53,7 @@ header {
   background: url(pattern_black.png);
   color: snow;
   display: flex;
-  -webkit-flex-flow: row no-wrap;
-  -ms-flex-flow: row no-wrap;
   flex-flow: row no-wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -88,14 +75,7 @@ header {
 
 ul {
   padding: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   position: absolute;
 }
@@ -106,7 +86,6 @@ ul li {
   width: 40px;
   overflow: hidden;
   float: right;
-  -webkit-transition: width 0.75 ease-in;
   transition: width 0.75s ease-in;
 }
 
@@ -180,17 +159,9 @@ ul li a {
 
 @media screen and (max-width: 767px) {
   main {
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     height: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0;
   }
@@ -245,4 +216,3 @@ ul li a {
     background-position: -300px -300px;
   }
 }
-

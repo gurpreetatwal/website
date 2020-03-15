@@ -1,0 +1,61 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: no
+  vars_prompt:
+    - name: email
+      prompt: 'What email should be used for Lets Encrypt?'
+      private: no
+  vars:
+    website_name: 'gatwal.com'
+    website_directory: '/home/static/sites/{{website_name}}'
+
+  handlers:
+    - name: 'nginx config'
+      notify: 'reload nginx'
+      command:
+        cmd: 'nginx -t'
+
+    - name: 'reload nginx'
+      service:
+        name: nginx
+        state: reloaded
+
+  tasks:
+    - name: 'create website directory'
+      become: yes
+      become_user: static
+      file:
+        path: '{{website_directory}}'
+        state: directory
+
+    - name: 'copy nginx configuration to sites-available'
+      notify: 'nginx config'
+      copy:
+        remote_src: no
+        src: '{{website_name}}'
+        dest: '/etc/nginx/sites-available/{{website_name}}'
+
+    - name: 'link nginx config to sites-enabled'
+      notify: 'nginx config'
+      file:
+        src: '/etc/nginx/sites-available/{{website_name}}'
+        dest: '/etc/nginx/sites-enabled/{{website_name}}'
+        state: link
+
+    - name: 'issue SSL certificates'
+      register: ssl_certificates
+      notify: 'nginx config'
+      command: 'certbot -n --nginx --agree-tos --email {{email}} -d {{website_name}} -d www.{{website_name}}'
+      async: 60 # timeout
+      poll: 5
+      args:
+        creates: '/etc/letsencrypt/live/{{website_name}}'
+
+    - name: 'fetch updated config'
+      when: ssl_certificates.changed
+      fetch:
+        src: '/etc/nginx/sites-available/{{website_name}}'
+        dest: './{{website_name}}'
+        flat: yes

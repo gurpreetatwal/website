@@ -14,7 +14,6 @@ ul li a {
   width: 100%;
 }
 
-a,
 ul li a {
   text-decoration: none;
 }
@@ -55,6 +54,10 @@ header {
   display: flex;
   flex-flow: row no-wrap;
   justify-content: center;
+}
+
+header a {
+  color: aquamarine;
 }
 
 #picWrap {

@@ -80,6 +80,7 @@ ul {
   padding: 0;
   display: inline-flex;
   flex-direction: column;
+  width: 50px;
 }
 
 ul li {
